@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MailTime – Y2K Gmail</title>
+<style>
+body {
+margin: 0;
+font-family: 'Courier New', Courier, monospace;
+background: linear-gradient(135deg, #ff66cc, #66ccff);
+color: #fff;
+text-align: center;
+}
+h1 {
+font-size: 3em;
+text-shadow: 2px 2px #000;
+margin-top: 50px;
+}
+.login-container {
+background: rgba(0,0,0,0.6);
+padding: 40px;
+border-radius: 20px;
+width: 300px;
+margin: 50px auto;
+box-shadow: 0 0 20px #fff;
+border: 3px solid #ff66cc;
+}
+input[type="text"], input[type="password"] {
+width: 90%;
+padding: 10px;
+margin: 10px 0;
+border: 2px solid #fff;
+border-radius: 10px;
+font-size: 1em;
+background-color: rgba(255,255,255,0.1);
+color: #fff;
+}
+input[type="submit"] {
+padding: 10px 20px;
+background: linear-gradient(to right, #ff66cc, #66ccff);
+border: none;
+border-radius: 15px;
+font-size: 1em;
+font-weight: bold;
+color: #fff;
+cursor: pointer;
+text-shadow: 1px 1px #000;
+transition: transform 0.2s;
+}
+input[type="submit"]:hover {
+transform: scale(1.1);
+}
+a {
+color: #ffcc00;
+text-decoration: none;
+font-weight: bold;
+}
+a:hover {
+text-decoration: underline;
+}
+.footer {
+margin-top: 50px;
+font-size: 0.8em;
+text-shadow: 1px 1px #000;
+}
+@keyframes blink {
+0%, 50%, 100% { opacity: 1; }
+25%, 75% { opacity: 0; }
+}
+.new-mail {
+color: #00ff00;
+font-weight: bold;
+animation: blink 1s infinite;
+}
+</style>
+</head>
+<body>
+
+<h1>MailTime</h1>
+
+<div class="login-container">
+<input type="text" placeholder="Email or Username">
+<input type="password" placeholder="Password">
+<br>
+<input type="submit" value="Sign In">
+<p class="new-mail">✨ You have new mail! ✨</p>
+</div>
+
+<div class="footer">
+© 2000 MailTime | <a href="#">Help</a> | <a href="#">Privacy</a>
+</div>
+
+<script>
+const button = document.querySelector('input[type="submit"]');
+button.addEventListener('click', (e) => {
+e.preventDefault();
+alert('Welcome to your Y2K inbox! 📧');
+});
+</script>
+
+</body>
+</html>
