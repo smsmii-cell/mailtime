@@ -79,13 +79,18 @@ animation: blink 1s infinite;
 
 <h1>MailTime</h1>
 
-<div class="login-container">
-<input type="text" placeholder="Email or Username">
-<input type="password" placeholder="Password">
-<br>
-<input type="submit" value="Sign In">
-<p class="new-mail">✨ You have new mail! ✨</p>
-</div>
+<script>
+const loginButton = document.getElementById('loginButton');
+const createAccount = document.getElementById('createAccount');
+const loginContainer = document.querySelector('.login-container');
+
+// Fake login
+loginButton.addEventListener('click', () => {
+const username = document.getElementById('username').value;
+if(!username) {
+alert('Please enter a username!');
+return;
+}
 
 <div class="footer">
 © 2000 MailTime | <a href="#">Help</a> | <a href="#">Privacy</a>
