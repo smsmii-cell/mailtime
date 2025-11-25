@@ -78,7 +78,25 @@ animation: blink 1s infinite;
 <body>
 
 <h1>MailTime</h1>
+<div class="login-container">
+<input type="text" placeholder="Username" id="username">
+<input type="password" placeholder="Password" id="password">
+<br>
+<input type="submit" value="Log In" id="loginButton">
+<p>or <a href="#" id="createAccount">Create Account</a></p>
+</div>
 
+
+<div class="footer">
+© 2000 MailTime | <a href="#">Help</a> | <a href="#">Privacy</a>
+</div>
+
+<script>
+const button = document.querySelector('input[type="submit"]');
+button.addEventListener('click', (e) => {
+e.preventDefault();
+alert('Welcome to your Y2K inbox! 📧');
+});
 <script>
 const loginButton = document.getElementById('loginButton');
 const createAccount = document.getElementById('createAccount');
@@ -91,18 +109,6 @@ if(!username) {
 alert('Please enter a username!');
 return;
 }
-
-<div class="footer">
-© 2000 MailTime | <a href="#">Help</a> | <a href="#">Privacy</a>
-</div>
-
-<script>
-const button = document.querySelector('input[type="submit"]');
-button.addEventListener('click', (e) => {
-e.preventDefault();
-alert('Welcome to your Y2K inbox! 📧');
-});
-</script>
 
 </body>
 </html>
